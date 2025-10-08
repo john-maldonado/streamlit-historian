@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  historian:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      # Override API_BASE via secrets file or env (optional)
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - STREAMLIT_SERVER_PORT=8501
